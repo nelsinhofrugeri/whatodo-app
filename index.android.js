@@ -1,26 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
     AppRegistry,
     Text,
     View,
     Button
 } from 'react-native';
+import TaskComponents from './src/components/TaskComponents';
 
-const generateRandomNumber = () => {
-    let number = Math.floor(Math.random() * 10);
-    alert(number);
-};
-
-const App = () => {
-    return (
-        <View>
-            <Text>Generate random numbe!r</Text>
-            <Button
-                title="Generator"
-                onPress={generateRandomNumber}
-            />
-        </View>
-    );
-};
+class App extends Component {
+    render() {
+        return (
+            <TaskComponents />
+        );
+    }
+}
 
 AppRegistry.registerComponent('app1', () => App);
